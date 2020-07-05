@@ -11,8 +11,11 @@
     </div>
     <div class="col-xs-12">
       <hr>
-      <button class="btn btn-primary">Display Details</button>
-      <p>Secret Password = tuna</p>
+      <button class="btn btn-primary"
+        (click)="onclick()">
+        Display Details
+      </button>
+      <p *ngIf="clicked" >Secret Password = tuna</p>
     </div>
   </div>
 </div>

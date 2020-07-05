@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  clicked = false;
+
+  onclick(){
+    if (!this.clicked) {
+      this.clicked = true;
+    } else {
+      this.clicked = false;
+    }
+  }
 }
