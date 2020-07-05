@@ -17,10 +17,9 @@
       </button>
       <p *ngIf="clicked" >Secret Password = tuna</p>
       <hr>
-      <p> Timestamp: </p>
+      <p *ngIf="buttonClicks.length >= 1"> Timestamp: </p>
       <ul [ngStyle]="{'backgroundColor':buttonClicks.length >= 5 ? 'blue' : 'white' }"
-        [ngClass]="{hitFive: buttonClicks.length >= 5}"
-        *ngIf="buttonClicks.length >= 1">
+        [ngClass]="{hitFive: buttonClicks.length >= 5}">
         <li *ngFor="let click of buttonClicks">
           {{ click }}</li>
       </ul>
