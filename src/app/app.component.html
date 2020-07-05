@@ -16,7 +16,8 @@
         Display Details
       </button>
       <p *ngIf="clicked" >Secret Password = tuna</p>
-      <p *ngIf="buttonClicks.length">Timestamp: {{ buttonClicks.toString() }}</p>
+      <p [ngStyle]="{'backgroundColor':buttonClicks.length > 5 ? 'blue' : 'white' }">
+        Timestamp: {{ buttonClicks.toString() }}</p>
     </div>
   </div>
 </div>
